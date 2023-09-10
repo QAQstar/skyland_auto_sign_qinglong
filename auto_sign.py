@@ -229,7 +229,7 @@ def main():
     else:
         print('没有设置token')
     # 发送消息
-    sendMessage('森空岛签到',run_message)#,skyland_notify.strip())
+    # sendMessage('森空岛签到',run_message,skyland_notify.strip())
 
 
 if __name__ == "__main__":
