@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import json
+import sys
+import time
+import datetime
+
+import requests
+
 """
 File: auto_sign.py(森空岛签到)
 Author: Zerolouis
@@ -14,7 +21,6 @@ import os
 import time
 
 import requests
-import notify
 
 skyland_tokens = os.getenv('SKYLAND_TOKEN')
 
