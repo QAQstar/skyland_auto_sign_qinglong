@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-File: auto_sign.py(森空岛签到)
-Author: Zerolouis
-cron: 0 50 5 * * *
-new Env('森空岛签到');
-Update: 2023/9/5
-"""
+# """
+# File: auto_sign.py(森空岛签到)
+# Author: Zerolouis
+# cron: 0 50 5 * * *
+# new Env('森空岛签到');
+# Update: 2023/9/5
+# """
 import json
 import logging
 import os
