@@ -39,7 +39,7 @@ def do_sign(token):
     进行签到
     """
     # 准备签到信息
-    configs = cookie_line.split("&")
+    configs = token.split("&")
     uid = configs[0].strip()
     signing_cookie = configs[1].strip()
     headers = {
