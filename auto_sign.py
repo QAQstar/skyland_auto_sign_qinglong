@@ -1,7 +1,7 @@
 """
 File: auto_sign.py(森空岛签到)
 Author: Zerolouis
-cron: 0 30 8 * * *
+cron: 0 50 5 * * *
 new Env('森空岛签到');
 Update: 2023/9/19.5
 """
