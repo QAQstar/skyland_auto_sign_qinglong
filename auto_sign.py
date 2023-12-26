@@ -251,7 +251,7 @@ def do_sign(cred):
         awards = resp['data']['awards']
         for j in awards:
             res = j['resource']
-            success_message: str = f'角色{i.get("nickName")}({i.get("channelName")})签到成功，获得了{res["name"]}x{res.get("count") or 1}\n'
+            success_message: str = f'角色{i.get("nickName")}({i.get("channelName")})签到成功，获得了{res["name"]}x{j.get("count") or 1}\n'
             run_message += f'[账号{account_num}] {success_message}\n'
             account_num += 1
             print(success_message)
@@ -286,6 +286,10 @@ def main():
         run_message = '没有设置token，请在环境变量里添加至少一个token'
     # 发送消息
     sendMessage('森空岛签到', run_message, skyland_notify.strip())
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
