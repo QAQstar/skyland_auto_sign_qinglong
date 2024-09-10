@@ -29,7 +29,7 @@ account_num: int = 1
 
 header = {
     'cred': '',
-    'User-Agent': 'Skland/1.0.1 (com.hypergryph.skland; build:100001014; Android 31; ) Okhttp/4.11.0',
+    'User-Agent': 'Skland/1.21.0 (com.hypergryph.skland; build:102100065; iOS 17.6.0; ) Alamofire/5.7.1',
     'Accept-Encoding': 'gzip',
     'Connection': 'close'
 }
