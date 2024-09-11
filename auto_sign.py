@@ -15,6 +15,7 @@ import logging
 import os
 import time
 from urllib import parse
+import random
 
 import requests
 import notify
@@ -31,22 +32,28 @@ header = {
     'cred': '',
     'User-Agent': 'Skland/1.21.0 (com.hypergryph.skland; build:102100065; iOS 17.6.0; ) Alamofire/5.7.1',
     'Accept-Encoding': 'gzip',
-    'Connection': 'close'
+    # 'Connection': 'close'
+    'Content-Type': 'application/json',
+    'Accept-Language': 'zh-Hans-CN;q=1.0',
+    language: 'zh-hans-CN',
 }
 
 header_login = {
-    'User-Agent': 'Skland/1.0.1 (com.hypergryph.skland; build:100001014; Android 31; ) Okhttp/4.11.0',
+    'User-Agent': 'Skland/1.21.0 (com.hypergryph.skland; build:102100065; iOS 17.6.0; ) Alamofire/5.7.1',
     'Accept-Encoding': 'gzip',
-    'Connection': 'close'
+    # 'Connection': 'close',
+    'Content-Type': 'application/json',
+    'Accept-Language': 'zh-Hans-CN;q=1.0',
+    language: 'zh-hans-CN',
 }
 
 # 签名请求头一定要这个顺序，否则失败
 # timestamp是必填的,其它三个随便填,不要为none即可
 header_for_sign = {
-    'platform': '',
+    'platform': '1',
     'timestamp': '',
     'dId': '',
-    'vName': ''
+    'vName': '1.21.0'
 }
 
 # 参数验证的token
@@ -278,9 +285,10 @@ def main():
     if len(token_list) != 0:
         for token in token_list:
             if token:
+                sleep_time = 600 + random.randint(0, 300)
                 start(token)
-                print('等待10s')
-                time.sleep(10)
+                print(f'等待{sleep_time}s')
+                time.sleep(sleep_time)
     else:
         print('没有设置token，请在环境变量里添加至少一个token')
         run_message = '没有设置token，请在环境变量里添加至少一个token'
@@ -289,6 +297,7 @@ def main():
 
 
 if __name__ == "__main__":
+    sleep(random.randint(0, 1800))
     main()
 
 
