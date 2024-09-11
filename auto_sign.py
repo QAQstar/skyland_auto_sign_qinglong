@@ -35,7 +35,7 @@ header = {
     # 'Connection': 'close'
     'Content-Type': 'application/json',
     'Accept-Language': 'zh-Hans-CN;q=1.0',
-    language: 'zh-hans-CN',
+    'language': 'zh-hans-CN',
 }
 
 header_login = {
@@ -44,7 +44,7 @@ header_login = {
     # 'Connection': 'close',
     'Content-Type': 'application/json',
     'Accept-Language': 'zh-Hans-CN;q=1.0',
-    language: 'zh-hans-CN',
+    'language': 'zh-hans-CN',
 }
 
 # 签名请求头一定要这个顺序，否则失败
