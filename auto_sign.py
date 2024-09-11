@@ -297,5 +297,5 @@ def main():
 
 
 if __name__ == "__main__":
-    sleep(random.randint(0, 1800))
+    time.sleep(random.randint(0, 1800))
     main()
